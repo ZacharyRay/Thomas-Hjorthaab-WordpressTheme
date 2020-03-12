@@ -1,0 +1,54 @@
+// Animations
+@keyframes slide_from_left{
+    0% {transform: translateX(-60px); opacity: 0;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+@keyframes slide_from_right{
+    0% {transform: translateX(60px); opacity: 0;}
+    100% {transform: translateX(0px); opacity: 1;}
+}
+@keyframes bouncing{
+     0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-20px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-3px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+@keyframes fade_in{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fade_in_text{
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes slide_down{
+    0% {transform: translateY(-120px); opacity: 0}
+    100% {transform: translateY(0px); opacity: 1}
+}
+
+@keyframes float {
+	0% {
+        transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+        transform: translatey(0px);
+	}
+}
+@keyframes blinkOn {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

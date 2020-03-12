@@ -1,0 +1,107 @@
+// Frontpage animation elements
+
+// Appear settings
+.story_wrapper{
+    height: 100%;
+}
+    // Animations
+    .fp-completely #slide_left {
+    animation-name: slide_from_left;
+    animation-duration: 3s;
+    opacity: 1;
+   }
+   .fp-completely #slide_right {
+    animation-name: slide_from_right;
+    animation-duration: 3s;
+    opacity: 1;
+   }
+   .floating {
+    animation: float 6s ease-in-out infinite !important;
+    height: 500px !important;
+    grid-column: 1 / 1 !important;
+    grid-row: 1 / 1 !important;
+    @include min-screen(720px){
+        height: 800px !important;
+    }
+   }
+   .no_floating{
+    height: 500px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    @include min-screen(720px){
+        height: 800px;
+    }
+   }
+   .fp-completely #fade_in {
+    animation-name: fade_in;
+    animation-duration: 5s;
+    opacity: 1;
+   }
+   .fp-completely #fade_in_text{
+    animation-name: fade_in_text;
+    animation-duration: 5s;
+    opacity: 1;
+   }
+   .fp-completely #down {
+    animation-name: slide_down;
+    animation-duration: 2s;
+    opacity: 1;
+   }
+   .fp-completely #blink {
+    animation: blinkOn 5s ease-in-out infinite;
+    animation-delay: 3s;
+   }
+
+   // Main content
+.scene_wrapper{
+    height: 100% !important;
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.scene_grid{
+    display: grid;
+    position: relative;
+    height: 100%;
+    align-items: center;
+}
+.scene_text{
+    display: none;
+    @include min-screen(720px){
+        display: block;
+    }
+}
+.scene_image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    @include min-screen(720px){
+        height: 800px;
+    }
+    
+}
+.scene_text_mobile{
+    position: absolute;
+    width: 200px;
+    opacity: 0;
+    height: 26vh;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    z-index: 999;
+    animation-duration: 5s;
+    align-self: flex-end;
+    margin-left: 20%;
+    @include min-screen(400px){
+    height: 25vh;
+    }
+    @include min-screen(720px){
+        display: none;
+    }
+}

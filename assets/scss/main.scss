@@ -1,0 +1,17 @@
+// Import settings (fonts, media queries, mixins etc.)
+@import "settings/media-queries";
+@import "settings/colors";
+@import "settings/keyframes/keyframes";
+@import "settings/utilities";
+
+//import elements
+@import "acf-elements/acf-animations";
+@import "acf-elements/about";
+
+//import main
+@import "main/header.scss";
+@import "main/body";
+@import "main/frontpage_misc";
+
+
+

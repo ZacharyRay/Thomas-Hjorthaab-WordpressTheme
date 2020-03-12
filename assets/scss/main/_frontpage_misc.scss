@@ -1,0 +1,10 @@
+.scene_one_arrow{
+    position: absolute;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vh;
+    font-size: 2rem;
+    animation: bouncing 2s infinite ease-in-out;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+    cursor: pointer;
+}
