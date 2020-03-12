@@ -1,4 +1,4 @@
-# abtion-theme
+# thomas-hjorthaab-theme
 
 ### Install dependencies 
 `npm i`
