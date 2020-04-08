@@ -60,7 +60,7 @@
         left: 0;
         width: 100%;
         height: 100px;
-        z-index: 3;
+        z-index: -1;
         transition: .5s;
         transition-delay: .5s;
         overflow: hidden;
@@ -95,6 +95,7 @@
       input:checked ~ .menu-mainmenu-container { 
         height: 100%;
         transition-delay: 0s;
+        z-index: 3;
         > ul {
           > li {
             opacity: 1;
