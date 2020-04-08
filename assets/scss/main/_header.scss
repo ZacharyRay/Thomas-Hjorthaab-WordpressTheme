@@ -4,9 +4,6 @@
 .menu_wrapper {
   display: flex;
     .signature img{
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: left;
         height: auto;
         width: 150px;
         position: fixed;
@@ -104,7 +101,7 @@
           }
         }
       } 
-
+/*
       .menu li:hover{
       background-image: url('http://localhost:8888/thomas-hjorthaab/wp-content/uploads/2020/03/fims-icon.png');
       height: 100%;
@@ -116,4 +113,5 @@
       animation-duration: 3s;
       text-decoration: line-through;
       }
+      */
   }

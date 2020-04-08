@@ -208,7 +208,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 100px; }
   @media screen and (min-width: 720px) {
     .image-wrap {
       height: 450px; } }
@@ -274,7 +275,20 @@
   position: absolute; }
 
 .menu_wrapper {
-  display: flex; }
+  display: flex;
+  /*
+      .menu li:hover{
+      background-image: url('http://localhost:8888/thomas-hjorthaab/wp-content/uploads/2020/03/fims-icon.png');
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+      animation-name: fade_in;
+      animation-duration: 3s;
+      text-decoration: line-through;
+      }
+      */ }
   .menu_wrapper .signature img {
     height: auto;
     width: 150px;
@@ -354,16 +368,6 @@
     .menu_wrapper input:checked ~ .menu-mainmenu-container > ul > li {
       opacity: 1;
       transition-delay: .5s; }
-  .menu_wrapper .menu li:hover {
-    background-image: url("http://localhost:8888/thomas-hjorthaab/wp-content/uploads/2020/03/fims-icon.png");
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    animation-name: fade_in;
-    animation-duration: 3s;
-    text-decoration: line-through; }
 
 html, body {
   margin: 0;
@@ -372,9 +376,6 @@ html, body {
   height: 100%; }
   html .main-wrapper, body .main-wrapper {
     height: 100%; }
-
-.presentation_wrapper {
-  margin-top: 100px; }
 
 .text {
   width: 340px;
