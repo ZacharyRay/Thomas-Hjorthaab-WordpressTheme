@@ -243,7 +243,11 @@
 .content-text {
   width: 80vw;
   height: 100%;
-  margin: 0 auto 50px auto; }
+  margin: 0 auto 50px auto;
+  font-size: 0.7rem; }
+  @media screen and (min-width: 720px) {
+    .content-text {
+      font-size: 1rem; } }
   @media screen and (min-width: 1080px) {
     .content-text {
       width: 1030px; } }
