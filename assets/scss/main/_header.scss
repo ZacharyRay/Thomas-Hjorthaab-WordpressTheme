@@ -1,5 +1,6 @@
 #burger {
   position: absolute;
+  display: none;
 }
 .menu_wrapper {
   display: flex;
@@ -66,7 +67,7 @@
         > ul {
           text-align: center;
           position: absolute;
-          top: 15%;
+          top: 13%;
           left: 20%;
           right: 20%;
           list-style: none;
@@ -86,7 +87,7 @@
               font-weight: 700;
               font-family: sans-serif;
               display: block;
-              padding: 30px;
+              padding: 25px;
             }
           }
         }
