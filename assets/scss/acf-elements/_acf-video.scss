@@ -1,0 +1,26 @@
+.carousel {
+    margin-bottom: 40px;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    @include min-screen(720px){
+    width: 650px;
+    }
+    @include min-screen(1080px){
+    width: 1030px;
+    }
+
+    .carousel-cell {
+        margin-right: 10px;
+        border-radius: 5px;
+        @include min-screen(720px){
+            height: 315px;
+            width: 560px;
+            }
+        @include min-screen(1080px){
+            height: 537px;
+            width: 956px;
+        }
+      }
+      
+    }

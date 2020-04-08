@@ -158,15 +158,21 @@
 
 .scene_text_mobile {
   position: absolute;
-  width: 200px;
+  width: 100%;
   opacity: 0;
   height: 26vh;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
   z-index: 999;
   animation-duration: 5s;
-  align-self: flex-end;
-  margin-left: 20%; }
+  display: flex;
+  flex-direction: column;
+  bottom: 0px;
+  justify-content: center;
+  font-size: 0.9rem; }
+  .scene_text_mobile p {
+    width: 300px;
+    align-self: center; }
   @media screen and (min-width: 400px) {
     .scene_text_mobile {
       height: 25vh; } }
@@ -174,8 +180,95 @@
     .scene_text_mobile {
       display: none; } }
 
-.yo {
-  margin-top: 200px; }
+.slider-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px; }
+  .slider-wrap .main-carousel {
+    height: 50vh;
+    width: 380px; }
+    @media screen and (min-width: 720px) {
+      .slider-wrap .main-carousel {
+        height: 80vh;
+        width: 700px; } }
+    .slider-wrap .main-carousel .carousel-cell {
+      width: 100%;
+      /* full width */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 100%; }
+
+.image-wrap {
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 720px) {
+    .image-wrap {
+      height: 450px; } }
+  .image-wrap .single-image {
+    width: 100%;
+    /* full width */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    height: 100%;
+    max-width: 1030px; }
+
+.seperation-wrap {
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .seperation-wrap .seperation-line-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    max-width: 1030px; }
+
+.content-text {
+  width: 80vw;
+  height: 100%;
+  margin: 0 auto 50px auto; }
+  @media screen and (min-width: 1080px) {
+    .content-text {
+      width: 1030px; } }
+
+.carousel {
+  margin-bottom: 40px;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px; }
+  @media screen and (min-width: 720px) {
+    .carousel {
+      width: 650px; } }
+  @media screen and (min-width: 1080px) {
+    .carousel {
+      width: 1030px; } }
+  .carousel .carousel-cell {
+    margin-right: 10px;
+    border-radius: 5px; }
+    @media screen and (min-width: 720px) {
+      .carousel .carousel-cell {
+        height: 315px;
+        width: 560px; } }
+    @media screen and (min-width: 1080px) {
+      .carousel .carousel-cell {
+        height: 537px;
+        width: 956px; } }
 
 #burger {
   position: absolute; }
@@ -220,7 +313,7 @@
   .menu_wrapper input:checked + label span:last-child {
     opacity: 1;
     transform: rotate(-405deg); }
-  .menu_wrapper input ~ .navigation {
+  .menu_wrapper input ~ .menu-mainmenu-container {
     background: white;
     position: fixed;
     top: 0;
@@ -231,7 +324,7 @@
     transition: .5s;
     transition-delay: .5s;
     overflow: hidden; }
-    .menu_wrapper input ~ .navigation > ul {
+    .menu_wrapper input ~ .menu-mainmenu-container > ul {
       text-align: center;
       position: absolute;
       top: 15%;
@@ -239,11 +332,15 @@
       right: 20%;
       list-style: none;
       padding-inline-start: 0px; }
-      .menu_wrapper input ~ .navigation > ul > li {
+      @media screen and (min-width: 720px) {
+        .menu_wrapper input ~ .menu-mainmenu-container > ul {
+          left: 35%;
+          right: 35%; } }
+      .menu_wrapper input ~ .menu-mainmenu-container > ul > li {
         opacity: 0;
         transition: .5s;
         transition-delay: 0s; }
-        .menu_wrapper input ~ .navigation > ul > li > a {
+        .menu_wrapper input ~ .menu-mainmenu-container > ul > li > a {
           text-decoration: none;
           text-transform: uppercase;
           color: black;
@@ -251,15 +348,24 @@
           font-family: sans-serif;
           display: block;
           padding: 30px; }
-  .menu_wrapper input:checked ~ .navigation {
+  .menu_wrapper input:checked ~ .menu-mainmenu-container {
     height: 100%;
     transition-delay: 0s; }
-    .menu_wrapper input:checked ~ .navigation > ul > li {
+    .menu_wrapper input:checked ~ .menu-mainmenu-container > ul > li {
       opacity: 1;
       transition-delay: .5s; }
+  .menu_wrapper .menu li:hover {
+    background-image: url("http://localhost:8888/thomas-hjorthaab/wp-content/uploads/2020/03/fims-icon.png");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    animation-name: fade_in;
+    animation-duration: 3s;
+    text-decoration: line-through; }
 
 html, body {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -267,16 +373,40 @@ html, body {
   html .main-wrapper, body .main-wrapper {
     height: 100%; }
 
-.content-grid {
-  height: 100%; }
+.presentation_wrapper {
+  margin-top: 100px; }
 
-.scene_one_arrow {
+.text {
+  width: 340px;
+  margin-top: 20px; }
+  .text p {
+    margin-block-end: 0; }
+  @media screen and (min-width: 720px) {
+    .text {
+      width: 700px; } }
+
+.arrow_wrapper {
+  animation-name: fade_in;
+  animation-duration: 2s;
+  display: grid;
+  height: 100%;
+  align-items: center;
   position: absolute;
-  justify-self: center;
-  align-self: end;
-  margin-bottom: 10vh;
-  font-size: 2rem;
-  animation: bouncing 2s infinite ease-in-out;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  cursor: pointer; }
+  width: 100%;
+  height: 13%;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1; }
+  @media screen and (min-width: 720px) {
+    .arrow_wrapper {
+      height: 15%; } }
+  .arrow_wrapper .scene_one_arrow {
+    position: absolute;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vh;
+    font-size: 2rem;
+    animation: bouncing 2s infinite ease-in-out;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    cursor: pointer;
+    z-index: 10; }
 

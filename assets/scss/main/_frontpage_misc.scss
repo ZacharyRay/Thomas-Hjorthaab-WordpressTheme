@@ -1,10 +1,28 @@
-.scene_one_arrow{
+
+.arrow_wrapper{
+    animation-name: fade_in;
+    animation-duration: 2s;
+    display: grid;
+    height: 100%;
+    align-items: center;
     position: absolute;
-    justify-self: center;
-    align-self: end;
-    margin-bottom: 10vh;
-    font-size: 2rem;
-    animation: bouncing 2s infinite ease-in-out;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-    cursor: pointer;
+    width: 100%;
+    height: 13%;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    @include min-screen(720px){
+        height: 15%;
+    }
+    .scene_one_arrow{
+        position: absolute;
+        justify-self: center;
+        align-self: end;
+        margin-bottom: 10vh;
+        font-size: 2rem;
+        animation: bouncing 2s infinite ease-in-out;
+        animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+        cursor: pointer;
+        z-index: 10;
+    }
 }
+

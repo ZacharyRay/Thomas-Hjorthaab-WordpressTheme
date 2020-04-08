@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/53f00e20c6.js" crossorigin="anonymous"></script>
     <title><?= bloginfo('name'); ?></title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -25,16 +26,13 @@
         <span></span>
         <span></span>
     </label>
-    <div class="navigation">    
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">BOOKS</a></li>
-            <li><a href="#">ILLUSTRATION</a></li>
-            <li><a href="#">OTHER WORK</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>  
-    </div>
+
+
+    <?php wp_nav_menu(
+        array(
+                'theme_location' => 'main'
+            )
+        ); ?>
 </div>
 </nav>
 <div class="content-grid">

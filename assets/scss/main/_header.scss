@@ -55,7 +55,7 @@
           transform: rotate(-405deg);
         }
       }
-      input ~ .navigation {
+      input ~ .menu-mainmenu-container {
         background: white;
         position: fixed;
         top: 0;
@@ -74,6 +74,10 @@
           right: 20%;
           list-style: none;
           padding-inline-start: 0px;
+          @include min-screen(720px){
+            left: 35%;
+            right: 35%;
+          }
           > li {
             opacity: 0;
             transition: .5s;
@@ -90,7 +94,7 @@
           }
         }
       }
-      input:checked ~ .navigation { 
+      input:checked ~ .menu-mainmenu-container { 
         height: 100%;
         transition-delay: 0s;
         > ul {
@@ -100,4 +104,16 @@
           }
         }
       } 
+
+      .menu li:hover{
+      background-image: url('http://localhost:8888/thomas-hjorthaab/wp-content/uploads/2020/03/fims-icon.png');
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right;
+      animation-name: fade_in;
+      animation-duration: 3s;
+      text-decoration: line-through;
+      }
   }

@@ -1,0 +1,23 @@
+
+.slider-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    .main-carousel{
+        height: 50vh;
+        width: 380px;
+        @include min-screen(720px){
+        height: 80vh;
+        width: 700px;
+        }
+        .carousel-cell {
+            width: 100%; /* full width */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: 100%;
+          }
+    }
+}

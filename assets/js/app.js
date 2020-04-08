@@ -24,4 +24,34 @@ $(function(){
   });
 });
 
+
+// Gallery SLider 
+
+$('.main-carousel').flickity({
+  // options
+  wrapAround: true,
+  resize: false,
+  setGallerySize: false,
+});
+
+function x() {
+  $('.main-carousel').each(function() {
+    if ($(this).find('div.carousel-cell').length === 1) {
+       $(this).find('button.flickity-prev-next-button.previous, button.flickity-prev-next-button.next, ol.flickity-page-dots').hide();
+    }
+  });
+ };
+ setTimeout(x,50);
+
+
+// Video gallery
+
+$('.carousel-video-gallery').flickity({
+  
+  pageDots: true,
+  wrapAround: true,
+  cellAlign: 'center',
+  fullscreen: true
+});
+
 });

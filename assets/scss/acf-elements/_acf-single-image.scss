@@ -1,0 +1,20 @@
+.image-wrap{
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include min-screen(720px){
+        height: 450px;
+    }
+    .single-image{
+        width: 100%; /* full width */
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+        height: 100%;
+        max-width: 1030px;
+    }
+}
